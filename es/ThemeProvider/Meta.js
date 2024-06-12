@@ -5,9 +5,9 @@ import { Fragment as _Fragment } from "react/jsx-runtime";
 import { jsxs as _jsxs } from "react/jsx-runtime";
 var Meta = /*#__PURE__*/memo(function (_ref) {
   var _ref$title = _ref.title,
-    title = _ref$title === void 0 ? 'LobeHub' : _ref$title,
+    title = _ref$title === void 0 ? 'Slime-INC' : _ref$title,
     _ref$description = _ref.description,
-    description = _ref$description === void 0 ? 'Empowering your AI dreams with LobeHub' : _ref$description,
+    description = _ref$description === void 0 ? 'Empowering your AI dreams with Slime-INC' : _ref$description,
     withManifest = _ref.withManifest;
   var genCdnUrl = useCdnFn();
   var genAssets = useCallback(function (path) {
