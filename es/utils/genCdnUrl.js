@@ -19,7 +19,7 @@ export var genCdnUrl = function genCdnUrl(_ref) {
   }
 };
 
-// export type JsdelivrCDN = 'jsdelivr' | 'lobehub';
+// export type JsdelivrCDN = 'jsdelivr' | 'Slime-INC';
 //
 // const JSDELIVR_API = 'https://fastly.jsdelivr.net';
 // const LOBEHUB_API = 'https://jsdelivr.lobeobjects.space';
