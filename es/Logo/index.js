@@ -32,9 +32,9 @@ var Logo = /*#__PURE__*/memo(function (_ref) {
     case '3d':
       {
         logoComponent = /*#__PURE__*/_jsx(Img, _objectSpread({
-          alt: "LobeHub",
+          alt: "Slime.Inc",
           height: size,
-          src: 'https://hub-apac-1.lobeobjects.space/logo-3d.webp',
+          src: 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/logo-3d.png',
           style: style,
           width: size
         }, rest));
@@ -43,9 +43,9 @@ var Logo = /*#__PURE__*/memo(function (_ref) {
     case 'flat':
       {
         logoComponent = /*#__PURE__*/_jsx(Img, {
-          alt: "LobeHub",
+          alt: "Slime.Inc",
           height: size,
-          src: 'https://hub-apac-1.lobeobjects.space/logo-flat.svg',
+          src: 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/logo-3d.png',
           style: style,
           width: size
         });
@@ -54,9 +54,9 @@ var Logo = /*#__PURE__*/memo(function (_ref) {
     case 'mono':
       {
         logoComponent = /*#__PURE__*/_jsx(Img, {
-          alt: "LobeHub",
+          alt: "Slime.Inc",
           height: size,
-          src: 'https://hub-apac-1.lobeobjects.space/logo-mono.svg',
+          src: 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/logo-3d.png',
           style: style,
           width: size
         });
@@ -75,7 +75,7 @@ var Logo = /*#__PURE__*/memo(function (_ref) {
       {
         logoComponent = /*#__PURE__*/_jsxs(_Fragment, {
           children: [/*#__PURE__*/_jsx(Img, {
-            alt: "LobeHub",
+            alt: "Slime.Inc",
             height: size,
             src: genCdnUrl(LOGO_3D),
             width: size
