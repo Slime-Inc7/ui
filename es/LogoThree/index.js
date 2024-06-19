@@ -29,15 +29,23 @@ var LogoThree = /*#__PURE__*/memo(function (_ref) {
     children: [loading && /*#__PURE__*/_jsx(Img, {
       alt: 'logo',
       height: size * 0.75,
-      src: 'https://cafeptthumb-phinf.pstatic.net/MjAyNDA2MThfMjY5/MDAxNzE4NjcwMDk2NzEx.MtcQUfcarXwhmMlj06k7-ikFrhsDTdH_wJe_tlQ6qoYg.T38Yqxbtjyc00axRtMCNnET8BCXgppAshnbjnxTEc20g.PNG/slime.png?type=w1600', // 원하는 URL로 직접 설정
+      src: 'https://cafeptthumb-phinf.pstatic.net/MjAyNDA2MThfMjY5/MDAxNzE4NjcwMDk2NzEx.MtcQUfcarXwhmMlj06k7-ikFrhsDTdH_wJe_tlQ6qoYg.T38Yqxbtjyc00axRtMCNnET8BCXgppAshnbjnxTEc20g.PNG/slime.png?type=w1600', // 직접 설정된 URL
       style: {
         position: 'absolute'
       },
-      width: size * 0.75,
-      onError: function onError() {
-        setLoading(false); // 로딩 실패 시 동작 설정
+      width: size * 0.75
+    }), /*#__PURE__*/_jsx(Spline, _objectSpread({
+      onLoad: function onLoad(splineApp) {
+        setLoading(false);
+        _onLoad === null || _onLoad === void 0 || _onLoad(splineApp);
+      },
+      scene: 'https://gw.alipayobjects.com/os/kitchen/8LH7slSv3s/logo.splinecode',
+      style: {
+        flex: 'none',
+        height: size,
+        width: size
       }
-    }), ...]
+    }, rest))]
   });
 });
 export default LogoThree;
