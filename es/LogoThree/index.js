@@ -29,7 +29,7 @@ var LogoThree = /*#__PURE__*/memo(function (_ref) {
     children: [loading && /*#__PURE__*/_jsx(Img, {
       alt: 'logo',
       height: size * 0.75,
-      src: 'https://cafeptthumb-phinf.pstatic.net/MjAyNDA2MThfMjY5/MDAxNzE4NjcwMDk2NzEx.MtcQUfcarXwhmMlj06k7-ikFrhsDTdH_wJe_tlQ6qoYg.T38Yqxbtjyc00axRtMCNnET8BCXgppAshnbjnxTEc20g.PNG/slime.png?type=w1600', // 직접 설정된 URL
+      src: 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/logo-3d.webp', // 직접 설정된 URL
       style: {
         position: 'absolute'
       },
