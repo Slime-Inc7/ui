@@ -18,7 +18,7 @@ export var useCdnFn = function useCdnFn() {
         version = _ref2.version,
         path = _ref2.path;
     if (pkg === '@lobehub/assets-logo') {  // 로고 패키지일 경우 직접 URL 반환
-      return 'https://cafeptthumb-phinf.pstatic.net/MjAyNDA2MThfMjY5/MDAxNzE4NjcwMDk2NzEx.MtcQUfcarXwhmMlj06k7-ikFrhsDTdH_wJe_tlQ6qoYg.T38Yqxbtjyc00axRtMCNnET8BCXgppAshnbjnxTEc20g.PNG/slime.png?type=w1600';
+      return 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/logo-3d.webp';
     }
     return genCdnUrl({
       path: path,
@@ -32,7 +32,7 @@ export var useCdnFn = function useCdnFn() {
         version = _ref3.version,
         path = _ref3.path;
     if (pkg === '@lobehub/assets-logo') {  // 로고 패키지일 경우 직접 URL 반환
-      return 'https://cafeptthumb-phinf.pstatic.net/MjAyNDA2MThfMjY5/MDAxNzE4NjcwMDk2NzEx.MtcQUfcarXwhmMlj06k7-ikFrhsDTdH_wJe_tlQ6qoYg.T38Yqxbtjyc00axRtMCNnET8BCXgppAshnbjnxTEc20g.PNG/slime.png?type=w1600';
+      return 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/logo-3d.webp';
     }
     return genCdnUrl({
       path: path,
@@ -46,7 +46,7 @@ export var useCdnFn = function useCdnFn() {
         version = _ref4.version,
         path = _ref4.path;
     if (pkg === '@lobehub/assets-logo') {  // 로고 패키지일 경우 직접 URL 반환
-      return 'https://cafeptthumb-phinf.pstatic.net/MjAyNDA2MThfMjY5/MDAxNzE4NjcwMDk2NzEx.MtcQUfcarXwhmMlj06k7-ikFrhsDTdH_wJe_tlQ6qoYg.T38Yqxbtjyc00axRtMCNnET8BCXgppAshnbjnxTEc20g.PNG/slime.png?type=w1600';
+      return 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/logo-3d.webp';
     }
     return genCdnUrl({
       path: path,
