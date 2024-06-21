@@ -34,7 +34,7 @@ var Logo = /*#__PURE__*/memo(function (_ref) {
         logoComponent = /*#__PURE__*/_jsx(Img, _objectSpread({
           alt: "Slime.Inc",
           height: size,
-          src: 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/logo-3d.webp',
+          src: 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/slime2.png',
           style: style,
           width: size
         }, rest));
@@ -45,7 +45,7 @@ var Logo = /*#__PURE__*/memo(function (_ref) {
         logoComponent = /*#__PURE__*/_jsx(Img, {
           alt: "Slime.Inc",
           height: size,
-          src: 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/logo-3d.webp',
+          src: 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/slime2.png',
           style: style,
           width: size
         });
@@ -56,7 +56,7 @@ var Logo = /*#__PURE__*/memo(function (_ref) {
         logoComponent = /*#__PURE__*/_jsx(Img, {
           alt: "Slime.Inc",
           height: size,
-          src: 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/logo-3d.webp',
+          src: 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/slime2.png',
           style: style,
           width: size
         });
@@ -77,7 +77,7 @@ var Logo = /*#__PURE__*/memo(function (_ref) {
           children: [/*#__PURE__*/_jsx(Img, {
             alt: "Slime.Inc",
             height: size,
-            src: 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/logo-3d.webp',
+            src: 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/slime2.png',
             width: size
           }), /*#__PURE__*/_jsx(LogoText, {
             size: size,
