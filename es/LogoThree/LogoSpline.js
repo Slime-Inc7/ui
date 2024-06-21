@@ -6,6 +6,7 @@ import { useThemeMode } from 'antd-style';
 import { memo, useState } from 'react';
 import { jsx as _jsx } from "react/jsx-runtime";
 import { jsxs as _jsxs } from "react/jsx-runtime";
+import Loading from "./Loading";
 
 // 새로운 이미지 URL을 추가합니다.
 var IMAGE_URL = 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/logo-3d.png';
