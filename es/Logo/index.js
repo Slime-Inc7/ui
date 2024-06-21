@@ -1,5 +1,3 @@
-'use client';
-
 import _objectSpread from "@babel/runtime/helpers/esm/objectSpread2";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 var _excluded = ["type", "size", "style", "extra", "className"];
@@ -14,6 +12,7 @@ import { LOGO_3D, useStyles } from "./style";
 import { jsx as _jsx } from "react/jsx-runtime";
 import { Fragment as _Fragment } from "react/jsx-runtime";
 import { jsxs as _jsxs } from "react/jsx-runtime";
+
 var Logo = /*#__PURE__*/memo(function (_ref) {
   var _ref$type = _ref.type,
     type = _ref$type === void 0 ? '3d' : _ref$type,
@@ -67,7 +66,14 @@ var Logo = /*#__PURE__*/memo(function (_ref) {
         logoComponent = /*#__PURE__*/_jsx(LogoText, _objectSpread({
           className: className,
           size: size,
-          style: style
+          style: _objectSpread(_objectSpread({
+            height: '100%',  // 부모 컨테이너의 크기에 맞게 조정
+            width: '100%',
+            maxHeight: '100%',
+            maxWidth: '100%',
+          }, style), {}, {
+            display: 'block'
+          })
         }, rest));
         break;
       }
@@ -80,9 +86,11 @@ var Logo = /*#__PURE__*/memo(function (_ref) {
             src: 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/slime2.png',
             width: size
           }), /*#__PURE__*/_jsx(LogoText, {
-            size: size,
+            size: size, // 크기를 100%로 설정
             style: {
-              marginLeft: Math.round(size / 4)
+              marginLeft: Math.round(size / 4),
+              height: '100%', // 부모 컨테이너의 크기에 맞게 조정
+              width: '100%',
             }
           })]
         });
@@ -91,7 +99,10 @@ var Logo = /*#__PURE__*/memo(function (_ref) {
           className: className,
           flex: 'none',
           horizontal: true,
-          style: style,
+          style: _objectSpread(_objectSpread({}, style), {}, {
+            height: size,
+            width: 'auto',
+          }),
           children: logoComponent
         });
         break;
@@ -104,7 +115,10 @@ var Logo = /*#__PURE__*/memo(function (_ref) {
     className: className,
     flex: 'none',
     horizontal: true,
-    style: style
+    style: _objectSpread(_objectSpread({}, style), {}, {
+      height: size,
+      width: 'auto',
+    })
   }, rest), {}, {
     children: [logoComponent, /*#__PURE__*/_jsx(Divider, {
       size: extraSize,
