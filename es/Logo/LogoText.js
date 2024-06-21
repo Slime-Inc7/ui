@@ -4,20 +4,28 @@ var _excluded = ["size", "style"];
 import { memo } from 'react';
 import { jsx as _jsx } from "react/jsx-runtime";
 import { jsxs as _jsxs } from "react/jsx-runtime";
+
 var LogoText = /*#__PURE__*/memo(function (_ref) {
   var _ref$size = _ref.size,
-    size = _ref$size === void 0 ? '1em' : _ref$size,
+    size = _ref$size === void 0 ? '100%' : _ref$size,
     style = _ref.style,
     rest = _objectWithoutProperties(_ref, _excluded);
+
   return /*#__PURE__*/_jsxs("svg", _objectSpread(_objectSpread({
     fill: "currentColor",
     fillRule: "evenodd",
     height: size,
+    width: size,
     style: _objectSpread({
       flex: 'none',
-      lineHeight: 1
+      lineHeight: 1,
+      maxHeight: '100%',
+      maxWidth: '100%',
+      height: '100%',   // 부모 컨테이너의 크기에 맞추기 위해 height와 width 추가
+      width: '100%',
     }, style),
     viewBox: "0 0 940 320",
+    preserveAspectRatio: "xMidYMid meet",  // 크기 조정 방식 제어
     xmlns: "http://www.w3.org/2000/svg"
   }, rest), {}, {
     children: [/*#__PURE__*/_jsx("title", {
