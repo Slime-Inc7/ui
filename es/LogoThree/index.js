@@ -1,6 +1,5 @@
 import { memo, useState } from 'react';
 import { Flexbox } from 'react-layout-kit';
-import Img from "../Img";
 import { jsx as _jsx } from "react/jsx-runtime";
 import { jsxs as _jsxs } from "react/jsx-runtime";
 
@@ -15,36 +14,41 @@ var LogoThree = /*#__PURE__*/memo(function (_ref) {
       _useState2 = _slicedToArray(_useState, 2),
       loading = _useState2[0],
       setLoading = _useState2[1];
+
+  // 새로운 스타일 객체 추가
+  const containerStyle = {
+    height: size,
+    width: size,
+    overflow: 'hidden',
+    position: 'relative',
+    display: 'flex',         // flexbox 사용
+    alignItems: 'center',    // 수직 중앙 정렬
+    justifyContent: 'center', // 수평 중앙 정렬
+    ...style                 // 기존 스타일 병합
+  };
+
+  const imgStyle = {
+    maxHeight: '100%',
+    maxWidth: '100%'
+  };
+
   return /*#__PURE__*/_jsxs(Flexbox, {
     align: 'center',
+    justify: 'center', // 중앙 정렬 추가
     className: className,
     flex: 'none',
-    justify: 'center',
-    style: _objectSpread({
-      height: size,
-      overflow: 'hidden',
-      position: 'relative',
-      width: size
-    }, style),
-    children: [loading && /*#__PURE__*/_jsx(Img, {
-      alt: 'logo',
-      height: size * 0.75,
-      src: 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/logo-3d.webp', // 직접 설정된 URL
-      style: {
-        position: 'absolute'
-      },
-      width: size * 0.75
-    }), /*#__PURE__*/_jsx(Spline, _objectSpread({
-      onLoad: function onLoad(splineApp) {
+    style: containerStyle,  // 수정된 스타일 사용
+    children: [loading && /*#__PURE__*/_jsx("div", {
+      style: { position: 'absolute' },
+      children: "Loading..." // 로딩 중일 때 표시할 내용
+    }), /*#__PURE__*/_jsx("img", _objectSpread({
+      src: 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/logo-3d.png', // 이미지 URL
+      alt: 'Logo Image',
+      onLoad: function onLoad() {
         setLoading(false);
-        _onLoad === null || _onLoad === void 0 || _onLoad(splineApp);
+        _onLoad === null || _onLoad === void 0 || _onLoad();
       },
-      scene: 'https://gw.alipayobjects.com/os/kitchen/8LH7slSv3s/logo.splinecode',
-      style: {
-        flex: 'none',
-        height: size,
-        width: size
-      }
+      style: imgStyle  // 이미지 스타일 적용
     }, rest))]
   });
 });
