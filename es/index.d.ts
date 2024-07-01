@@ -3,6 +3,7 @@ export { type ActionEvent, default as ActionIconGroup, type ActionIconGroupItems
 export { default as Alert, type AlertProps } from './Alert';
 export { default as Avatar, type AvatarProps } from './Avatar';
 export { default as BackBottom, type BackBottomProps } from './BackBottom';
+export { default as Logo, type LobeHubProps as LogoProps } from './brand/LobeHub';
 export { default as Burger, type BurgerProps } from './Burger';
 export { default as ChatHeader, type ChatHeaderProps } from './ChatHeader';
 export { default as ChatHeaderTitle, type ChatHeaderTitleProps, } from './ChatHeader/ChatHeaderTitle';
@@ -12,6 +13,7 @@ export type { ChatListProps, OnActionsClick, OnAvatatsClick, OnMessageChange, Re
 export { default as ChatList } from './ChatList';
 export { default as ActionsBar, type ActionsBarProps } from './ChatList/ActionsBar';
 export { default as CodeEditor, type CodeEditorProps } from './CodeEditor';
+export { default as Collapse, type CollapseProps } from './Collapse';
 export { default as ColorScales, type ColorScalesProps } from './ColorScales';
 export { type Config, default as ConfigProvider, useCdnFn } from './ConfigProvider';
 export { default as ContextMenu, type ContextMenuProps } from './ContextMenu';
@@ -53,7 +55,6 @@ export { default as ImageGallery, type ImageGalleryProps } from './Image/ImageGa
 export { Input, type InputProps, TextArea, type TextAreaProps } from './Input';
 export { default as Layout, LayoutFooter, type LayoutFooterProps, LayoutHeader, type LayoutHeaderProps, LayoutMain, type LayoutMainProps, type LayoutProps, LayoutSidebar, LayoutSidebarInner, type LayoutSidebarInnerProps, type LayoutSidebarProps, LayoutToc, type LayoutTocProps, } from './Layout';
 export { default as List, type ListItemProps } from './List';
-export { default as Logo, type LogoProps } from './Logo';
 export { default as LogoThree, type LogoThreeProps } from './LogoThree';
 export { default as LogoSpline, type LogoSplineProps } from './LogoThree/LogoSpline';
 export { default as Markdown, type MarkdownProps } from './Markdown';

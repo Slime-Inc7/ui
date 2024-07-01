@@ -79,12 +79,10 @@ var Markdown = /*#__PURE__*/memo(function (_ref) {
     return [remarkGfm, remarkMath, isChatMode && remarkBreaks].filter(Boolean);
   }, [isChatMode]);
   return /*#__PURE__*/_jsx("article", {
-    className: className,
+    className: cx(styles.root, className),
     "data-code-type": "markdown",
     onDoubleClick: onDoubleClick,
-    style: _objectSpread({
-      overflow: 'hidden'
-    }, style),
+    style: style,
     children: /*#__PURE__*/_jsx(ImageGallery, {
       enable: enableImageGallery,
       children: /*#__PURE__*/_jsx(ReactMarkdown, _objectSpread(_objectSpread({

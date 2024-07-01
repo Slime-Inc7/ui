@@ -12,48 +12,50 @@ import useMergeState from 'use-merge-value';
 import Avatar from "../Avatar";
 import { useStyles } from "./style";
 import { jsx as _jsx } from "react/jsx-runtime";
-var EmojiPicker = /*#__PURE__*/memo(function (_ref) {
-  var value = _ref.value,
+
+const EmojiPicker = /*#__PURE__*/memo(function (_ref) {
+  const {
+    value,
     _ref$defaultAvatar = _ref.defaultAvatar,
-    defaultAvatar = _ref$defaultAvatar === void 0 ? '🤖' : _ref$defaultAvatar,
+    defaultAvatar = _ref$defaultAvatar === void 0 ? 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/slime3.png' : _ref$defaultAvatar, // 기본 아바타 이미지를 URL로 설정
     _ref$backgroundColor = _ref.backgroundColor,
     backgroundColor = _ref$backgroundColor === void 0 ? 'rgba(0,0,0,0)' : _ref$backgroundColor,
-    onChange = _ref.onChange,
+    onChange,
     _ref$locale = _ref.locale,
-    locale = _ref$locale === void 0 ? 'en-US' : _ref$locale;
-  var _useStyles = useStyles(),
-    styles = _useStyles.styles;
-  var _useSWR = useSWR(locale, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      return _regeneratorRuntime().wrap(function _callee$(_context) {
-        while (1) switch (_context.prev = _context.next) {
-          case 0:
-            _context.next = 2;
-            return import("@emoji-mart/data/i18n/".concat(locale.split('-')[0], ".json"));
-          case 2:
-            return _context.abrupt("return", _context.sent);
-          case 3:
-          case "end":
-            return _context.stop();
-        }
-      }, _callee);
-    })), {
-      revalidateOnFocus: false
-    }),
-    i18n = _useSWR.data;
-  var _useMergeState = useMergeState('🤖', {
-      defaultValue: defaultAvatar,
-      onChange: onChange,
-      value: value
-    }),
-    _useMergeState2 = _slicedToArray(_useMergeState, 2),
-    ava = _useMergeState2[0],
-    setAva = _useMergeState2[1];
+    locale = _ref$locale === void 0 ? 'en-US' : _ref$locale
+  } = _ref;
+
+  const { styles } = useStyles();
+
+  const { data: i18n } = useSWR(locale, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return import("@emoji-mart/data/i18n/".concat(locale.split('-')[0], ".json"));
+        case 2:
+          return _context.abrupt("return", _context.sent);
+        case 3:
+        case "end":
+          return _context.stop();
+      }
+    }, _callee);
+  })), {
+    revalidateOnFocus: false
+  });
+
+  const [ava, setAva] = useMergeState('https://raw.githubusercontent.com/Slime-Inc7/ui/master/slime3.png', { // 기본 아바타 이미지를 URL로 설정
+    defaultValue: defaultAvatar,
+    onChange,
+    value
+  });
+
   return /*#__PURE__*/_jsx(Popover, {
     content: /*#__PURE__*/_jsx("div", {
       className: styles.picker,
       children: /*#__PURE__*/_jsx(Picker, {
         data: data,
-        i18n: i18n,
+        i18n,
         locale: locale.split('-')[0],
         onEmojiSelect: function onEmojiSelect(e) {
           return setAva(e.native);
@@ -78,4 +80,5 @@ var EmojiPicker = /*#__PURE__*/memo(function (_ref) {
     })
   });
 });
+
 export default EmojiPicker;

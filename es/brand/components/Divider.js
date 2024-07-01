@@ -1,13 +1,14 @@
 import _objectSpread from "@babel/runtime/helpers/esm/objectSpread2";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["size", "style"];
 import { memo } from 'react';
 import { jsx as _jsx } from "react/jsx-runtime";
-var Divider = /*#__PURE__*/memo(function (_ref) {
-  var _ref$size = _ref.size,
-    size = _ref$size === void 0 ? '1em' : _ref$size,
-    style = _ref.style,
-    rest = _objectWithoutProperties(_ref, _excluded);
+
+const _excluded = ["size", "style"];
+
+const Divider = /*#__PURE__*/memo(function (_ref) {
+  const { size = '1em', style } = _ref;
+  const rest = _objectWithoutProperties(_ref, _excluded);
+
   return /*#__PURE__*/_jsx("svg", _objectSpread(_objectSpread({
     fill: "none",
     height: size,
@@ -27,4 +28,5 @@ var Divider = /*#__PURE__*/memo(function (_ref) {
     })
   }));
 });
+
 export default Divider;

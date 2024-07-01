@@ -5,7 +5,7 @@ import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutPr
 import _taggedTemplateLiteral from "@babel/runtime/helpers/esm/taggedTemplateLiteral";
 var _excluded = ["fullFeatured", "fileName", "allowChangeLanguage", "language", "children", "className", "style", "icon"],
   _excluded2 = ["language", "children", "className", "style"];
-var _templateObject, _templateObject2;
+var _templateObject;
 import { createStyles } from 'antd-style';
 import Highlighter from "../Highlighter";
 import Snippet from "../Snippet";
@@ -14,8 +14,7 @@ import { jsx as _jsx } from "react/jsx-runtime";
 var useStyles = createStyles(function (_ref) {
   var css = _ref.css;
   return {
-    container: css(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    overflow: hidden;\n    margin-block: 1em;\n    border-radius: calc(var(--lobe-markdown-border-radius) * 1px);\n    box-shadow: 0 0 0 1px var(--lobe-markdown-border-color);\n  "]))),
-    highlight: css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    pre {\n      overflow-x: hidden !important;\n      padding: 1em !important;\n    }\n  "])))
+    container: css(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    overflow: hidden;\n    margin-block: 1em;\n    border-radius: calc(var(--lobe-markdown-border-radius) * 1px);\n    box-shadow: 0 0 0 1px var(--lobe-markdown-border-color);\n  "])))
   };
 });
 export var Pre = function Pre(_ref2) {
@@ -34,7 +33,7 @@ export var Pre = function Pre(_ref2) {
     cx = _useStyles.cx;
   return /*#__PURE__*/_jsx(Highlighter, _objectSpread(_objectSpread({
     allowChangeLanguage: allowChangeLanguage,
-    className: cx(styles.container, styles.highlight, className),
+    className: cx(styles.container, className),
     copyButtonSize: {
       blockSize: 28,
       fontSize: 16

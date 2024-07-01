@@ -1,22 +1,22 @@
 import { createContext, memo, useContext } from 'react';
 import { genCdnUrl } from "../utils/genCdnUrl";
 import { jsx as _jsx } from "react/jsx-runtime";
-export var ConfigContext = /*#__PURE__*/createContext(null);
-var ConfigProvider = /*#__PURE__*/memo(function (_ref) {
-  var children = _ref.children,
-      config = _ref.config;
+
+export const ConfigContext = /*#__PURE__*/createContext(null);
+
+const ConfigProvider = /*#__PURE__*/memo(function (_ref) {
+  const { children, config } = _ref;
   return /*#__PURE__*/_jsx(ConfigContext.Provider, {
-    value: config,
-    children: children
+    children: children,  // children을 value 앞에 배치
+    value: config
   });
 });
 
-export var useCdnFn = function useCdnFn() {
-  var config = useContext(ConfigContext);
+export const useCdnFn = function useCdnFn() {
+  const config = useContext(ConfigContext);
+
   if (!config) return function (_ref2) {
-    var pkg = _ref2.pkg,
-        version = _ref2.version,
-        path = _ref2.path;
+    const { pkg, version, path } = _ref2;
     if (pkg === '@lobehub/assets-logo') {  // 로고 패키지일 경우 직접 URL 반환
       return 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/slime2.png';
     }
@@ -27,10 +27,9 @@ export var useCdnFn = function useCdnFn() {
       version: version
     });
   };
+
   if (config.proxy !== 'custom') return function (_ref3) {
-    var pkg = _ref3.pkg,
-        version = _ref3.version,
-        path = _ref3.path;
+    const { pkg, version, path } = _ref3;
     if (pkg === '@lobehub/assets-logo') {  // 로고 패키지일 경우 직접 URL 반환
       return 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/slime2.png';
     }
@@ -41,10 +40,9 @@ export var useCdnFn = function useCdnFn() {
       version: version
     });
   };
+
   return config.customCdnFn || function (_ref4) {
-    var pkg = _ref4.pkg,
-        version = _ref4.version,
-        path = _ref4.path;
+    const { pkg, version, path } = _ref4;
     if (pkg === '@lobehub/assets-logo') {  // 로고 패키지일 경우 직접 URL 반환
       return 'https://raw.githubusercontent.com/Slime-Inc7/ui/master/slime2.png';
     }

@@ -1,9 +1,10 @@
 import { CSSProperties } from 'react';
-import { type SplineProps } from "../Spline";
-export interface LogoThreeProps extends Partial<SplineProps> {
-    className?: string;
-    size?: number;
-    style?: CSSProperties;
+
+export interface LogoThreeProps {
+  className?: string;
+  size?: number;
+  style?: CSSProperties;
 }
+
 declare const LogoThree: import("react").NamedExoticComponent<LogoThreeProps>;
 export default LogoThree;

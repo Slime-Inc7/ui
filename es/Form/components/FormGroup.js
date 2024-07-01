@@ -86,6 +86,7 @@ var FormGroup = /*#__PURE__*/memo(function (_ref2) {
   });
   return /*#__PURE__*/_jsx(Collapse, _objectSpread({
     className: cx(styles.group, variantStyle, className),
+    collapsible: variant === 'pure' ? 'icon' : undefined,
     defaultActiveKey: defaultActive ? [1] : undefined,
     expandIcon: function expandIcon(_ref3) {
       var isActive = _ref3.isActive;

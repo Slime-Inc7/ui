@@ -73,9 +73,7 @@ var EditableMessage = /*#__PURE__*/memo(function (_ref) {
       fontSize: fontSize,
       fullFeaturedCodeBlock: fullFeaturedCodeBlock,
       style: _objectSpread({
-        height: isAutoSize ? 'unset' : height,
-        overflowX: 'hidden',
-        overflowY: 'auto'
+        height: isAutoSize ? 'unset' : height
       }, stylesProps === null || stylesProps === void 0 ? void 0 : stylesProps.markdown),
       variant: 'chat',
       children: value || placeholder || ''

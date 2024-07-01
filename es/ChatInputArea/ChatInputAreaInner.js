@@ -38,7 +38,8 @@ var ChatInputAreaInner = /*#__PURE__*/forwardRef(function (_ref, ref) {
     },
     onPressEnter: function onPressEnter(e) {
       _onPressEnter === null || _onPressEnter === void 0 || _onPressEnter(e);
-      if (!loading && !e.shiftKey && !isChineseInput.current) {
+      var isMobile = /mobi|android|iphone/i.test(navigator.userAgent);
+      if (!loading && !isChineseInput.current && (!isMobile && !e.shiftKey || isMobile && e.shiftKey)) {
         e.preventDefault();
         onSend === null || onSend === void 0 || onSend();
       }

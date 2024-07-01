@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import { type CSSProperties } from 'react';
 import { type FlexboxProps } from 'react-layout-kit';
 import { type IconProps, type IconSizeConfig, type IconSizeType, LucideIconProps } from "../Icon";
 import { type TooltipProps } from "../Tooltip";
@@ -30,6 +30,7 @@ export interface ActionIconProps extends LucideIconProps, FlexboxProps {
      * @description Set the loading status of ActionIcon
      */
     loading?: boolean;
+    overlayStyle?: CSSProperties;
     /**
      * @description The position of the tooltip relative to the target
      * @enum ["top","left","right","bottom","topLeft","topRight","bottomLeft","bottomRight","leftTop","leftBottom","rightTop","rightBottom"]

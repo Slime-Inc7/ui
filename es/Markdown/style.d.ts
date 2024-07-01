@@ -5,4 +5,5 @@ export declare const useStyles: (props?: {
     marginMultiple?: number | undefined;
 } | undefined) => import("antd-style").ReturnStyles<{
     chat: import("antd-style").SerializedStyles;
+    root: import("antd-style").SerializedStyles;
 }>;

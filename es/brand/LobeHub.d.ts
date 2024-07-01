@@ -1,6 +1,6 @@
 import { type ReactNode } from 'react';
 import { DivProps } from "../types";
-export interface LogoProps extends DivProps {
+export interface LobeHubProps extends DivProps {
     /**
      * @description Additional React Node to be rendered next to the logo
      */
@@ -16,5 +16,5 @@ export interface LogoProps extends DivProps {
      */
     type?: '3d' | 'flat' | 'mono' | 'text' | 'combine';
 }
-declare const Logo: import("react").NamedExoticComponent<LogoProps>;
-export default Logo;
+declare const LobeHub: import("react").NamedExoticComponent<LobeHubProps>;
+export default LobeHub;

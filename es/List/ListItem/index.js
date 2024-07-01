@@ -95,7 +95,7 @@ var ListItem = /*#__PURE__*/forwardRef(function (_ref, ref) {
       }), date && /*#__PURE__*/_jsx("div", {
         className: cx(styles.time, classNames === null || classNames === void 0 ? void 0 : classNames.time),
         style: showAction ? {
-          opacity: 0
+          display: 'none'
         } : {},
         children: getChatItemTime(date)
       })]

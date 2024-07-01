@@ -2,7 +2,7 @@
 
 import _objectSpread from "@babel/runtime/helpers/esm/objectSpread2";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-var _excluded = ["color", "fill", "className", "active", "icon", "size", "style", "glass", "title", "placement", "arrow", "spotlight", "onClick", "children", "loading", "tooltipDelay", "fillOpacity", "fillRule", "focusable", "disable", "spin"];
+var _excluded = ["color", "fill", "className", "active", "icon", "size", "style", "glass", "title", "placement", "arrow", "spotlight", "onClick", "children", "loading", "overlayStyle", "tooltipDelay", "fillOpacity", "fillRule", "focusable", "disable", "spin"];
 import { Loader2 } from 'lucide-react';
 import { forwardRef, useMemo } from 'react';
 import { Flexbox } from 'react-layout-kit';
@@ -31,6 +31,7 @@ var ActionIcon = /*#__PURE__*/forwardRef(function (_ref, ref) {
     onClick = _ref.onClick,
     children = _ref.children,
     loading = _ref.loading,
+    overlayStyle = _ref.overlayStyle,
     _ref$tooltipDelay = _ref.tooltipDelay,
     tooltipDelay = _ref$tooltipDelay === void 0 ? 0.5 : _ref$tooltipDelay,
     fillOpacity = _ref.fillOpacity,
@@ -88,9 +89,9 @@ var ActionIcon = /*#__PURE__*/forwardRef(function (_ref, ref) {
   return /*#__PURE__*/_jsx(Tooltip, {
     arrow: arrow,
     mouseEnterDelay: tooltipDelay,
-    overlayStyle: {
+    overlayStyle: _objectSpread({
       pointerEvents: 'none'
-    },
+    }, overlayStyle),
     placement: placement,
     title: title,
     children: actionIconBlock
