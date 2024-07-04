@@ -14,14 +14,15 @@ const LogoSpline = /*#__PURE__*/memo(function (_ref) {
   }, []);
 
   return /*#__PURE__*/_jsxs("div", {
-    children: [ // children을 가장 먼저 배치
+    children: [
       loading && /*#__PURE__*/_jsx("img", {
         alt: 'logo',
         height: height * 0.75,
         onLoad: handleLoad,
         src: LOGO_URL,
         style: {
-          position: 'absolute'
+          position: 'absolute',
+          zIndex: 10
         },
         width: width * 0.75
       }),
@@ -32,15 +33,17 @@ const LogoSpline = /*#__PURE__*/memo(function (_ref) {
         style: {
           flex: 'none',
           height: height,
-          width: width
+          width: width,
+          zIndex: 10
         }
       })
     ],
-    className: className, // className을 style 앞에 배치
+    className: className,
     style: _objectSpread({
       height: height,
       position: 'relative',
-      width: width
+      width: width,
+      zIndex: 10
     }, style)
   });
 });
