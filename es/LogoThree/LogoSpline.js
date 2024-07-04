@@ -9,41 +9,43 @@ const LogoSpline = /*#__PURE__*/memo(function (_ref) {
   const { className, style, width, height } = _ref;
   const [_useState, _useState2] = _slicedToArray(useState(true), 2);
   const [loading, setLoading] = _slicedToArray(useState(true), 2);
+
   const handleLoad = useCallback(() => {
     setLoading(false);
   }, []);
+
+  // width와 height를 숫자형 값으로 변환하여 NaN이 발생하지 않도록 함
+  const computedWidth = typeof width === 'number' ? width : parseFloat(width) || 0;
+  const computedHeight = typeof height === 'number' ? height : parseFloat(height) || 0;
 
   return /*#__PURE__*/_jsxs("div", {
     children: [
       loading && /*#__PURE__*/_jsx("img", {
         alt: 'logo',
-        height: height * 0.75,
+        height: computedHeight * 0.75,
         onLoad: handleLoad,
         src: LOGO_URL,
         style: {
-          position: 'absolute',
-          zIndex: 10
+          position: 'absolute'
         },
-        width: width * 0.75
+        width: computedWidth * 0.75
       }),
       !loading && /*#__PURE__*/_jsx("img", {
         alt: 'logo',
-        height: height,
+        height: computedHeight,
         src: LOGO_URL,
         style: {
           flex: 'none',
-          height: height,
-          width: width,
-          zIndex: 10
+          height: computedHeight,
+          width: computedWidth
         }
       })
     ],
     className: className,
     style: _objectSpread({
-      height: height,
+      height: computedHeight,
       position: 'relative',
-      width: width,
-      zIndex: 10
+      width: computedWidth
     }, style)
   });
 });
